@@ -1,2 +1,2 @@
 # Competitive-programming
-Collection of Competitive programming questions
+Collection of Competitive programming algorithm implementations
