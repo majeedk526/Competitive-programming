@@ -27,13 +27,9 @@ public class LongestIncSubsequence {
 			
 			if(arr[j] < arr[i]){
 				
-				if(seq[i] < seq[j]+1){
-					seq[i] = seq[j] + 1;
-				}
-				
+				seq[i] = Math.max(seq[i], seq[j] + 1);
 				if(max< seq[i]){max = seq[i];}
 			}
-			
 			j++;
 			
 			if(j==i){
