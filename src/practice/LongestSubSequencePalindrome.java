@@ -1,5 +1,12 @@
 package practice;
 
+/**
+ * Given a string, find two longest palindrome so that product of there lengths are max.
+ * Restriction : The indices of both palindromic subsequence must not cross each others' 
+ * 
+ * 
+ */
+
 import java.util.Scanner;
 
 public class LongestSubSequencePalindrome {
@@ -9,6 +16,7 @@ public class LongestSubSequencePalindrome {
 		//eeegeeksforskeeggeeks
 		
 		LongestSubSequencePalindrome lsp = new LongestSubSequencePalindrome();
+		System.out.println("Enter string");
 		Scanner scan = new Scanner(System.in);
 		String str = scan.nextLine();
 		scan.close();
@@ -25,7 +33,23 @@ public class LongestSubSequencePalindrome {
 	}
 		
 		System.out.println(ml1 * ml2);
-		//lsp.findPalindrome("agbdba".toCharArray());
+		
+		
+		
+		/* Uncomment to call recurrsive function
+	 	String sb1, sb2;
+		tl1=0; tl2=0; ml1 = 0; ml2 = 0;
+		
+		for(int i=0; i<str.length(); i++){
+			sb1 = sb.substring(0,  i+1);
+			sb2 = sb.substring(i+1, str.length());
+			tl1 = lsp.lcspRecurrsive(sb1.toCharArray(), 0, sb1.length());
+			tl2 = lsp.lcspRecurrsive(sb2.toCharArray(), 0, sb2.length());
+			
+			if(tl1* tl2 > ml1 * ml2) {ml1 = tl1; ml2 = tl2;}
+		}
+		
+		System.out.println("Recurrsive : " + ml1 * ml2); **/
 	}
 	
 	
@@ -57,9 +81,8 @@ public class LongestSubSequencePalindrome {
 			}
 			k++;
 		}
-		//int h=0,w = arr.length-1;
-		//int length = seq[h][w];
 		
+		/** Un comment to print matrix and sub sequence string
 		
 		// print matrix
 		for(int i=0; i<len; i++){
@@ -100,7 +123,27 @@ public class LongestSubSequencePalindrome {
 		}
 		
 		System.out.println(pstr);
-		return length;
+		//**/
+		
+		return seq[0][arr.length-1];
+	}
+	
+	
+	public int lcspRecurrsive(char arr[], int start, int len){
+		
+		if(len == 1) {
+			return 1;
+		}
+		
+		if(len ==0 ){
+			return 0;
+		}
+		
+		if(arr[start] == arr[start + len-1]){
+			return 2 + lcspRecurrsive(arr, start+1, len-2);
+		} else {
+			return Math.max(lcspRecurrsive(arr,start+1, len-1), lcspRecurrsive(arr, start, len-1));
+		}
 	}
 
 }
