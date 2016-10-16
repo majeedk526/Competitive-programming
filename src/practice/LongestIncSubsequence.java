@@ -38,6 +38,13 @@ public class LongestIncSubsequence {
 			}
 		}
 		
+		/**Uncomment to print array
+		
+		for(int n: seq){
+			System.out.print(n + ", ");
+		}
+		System.out.println("");
+		//**/
 		
 		return max;
 	}
