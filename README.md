@@ -8,3 +8,4 @@ Collection of Competitive programming algorithm implementations
  * Refrence [Youtube](https://www.youtube.com/watch?v=_nCsPn7_OgI)
 * Finding Longest increasing subsequence from a given array [LongestIncSubsequence.java](./src/practice/LongestIncSubsequence.java)
  * Refrence [Youtube](https://www.youtube.com/watch?v=CE2b_-XfVDk)
+ * Application of the above algorithm [HackerRank Question](https://www.hackerrank.com/challenges/divisible-sum-pairs). Try yourself first    before looking at the solution. [Implementation](./src/practice/DivisiblePairSum.java)
