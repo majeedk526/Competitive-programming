@@ -1,0 +1,4 @@
+amleth,hamlet
+dirty room,dormitory
+listen,silent,tinsel
+pear,reap
